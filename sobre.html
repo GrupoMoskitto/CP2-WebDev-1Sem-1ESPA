@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Sobre nós | Grupo Moskitto</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script>
+        // função para trocar a cor do background
     
+        function trocar(color){
+            document.body.style.background = color;
+        }
+    </script>
+</head>
+<body class="theme-dark">
+    <header>
+        <img src="./src/assets/logo-moskitto-semfundo.png" alt="logo-moskitto">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#d9b89b')"/>
+                    <input type="button" class="color" onclick="trocar('#f2e5a2')"/>
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="title-sobre">
+        <h3>NOSSA HISTÓRIA</h3>
+    </div>
+    <div class="conteudo">
+        <img src="./src/assets/logo-moskitto-semfundo.png">           
+        <p>Fundado em 2024 por jovens estudantes do curso Engenharia de software, buscam sempre inovar a se destacar na área.</p>
+    </div>
 </body>
 </html>
