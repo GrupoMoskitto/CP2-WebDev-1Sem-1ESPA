@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz | Grupo Moskitto</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
-<body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        alert("Seja bem-vindo ao quiz");
+
+        const perguntas = [
+            { perguntas: "Qual o tipo mais comum de bike utilizada no dia a dia? \n a) Bike de passeio \n b) Montain Bike \n c) Bike Elétrica", resposta: "a" },
+            { perguntas: "Qual o componente responsável pela frenagem? \n a) Pedal \n b) Freio \n c) Guidão ", resposta: "B" },
+            { perguntas: "Em qual ano foi lançada a 1ª bike com pedais? \n a) 2001 \n b) 1870 \n c) 1865", resposta: "C" },
+            { perguntas: "Qual desses itens é essencial para segurança ao andar de bike? \n a) Capacete \n b) Luvas \n c) Joelheiras", resposta: "A" },
+            { perguntas: "Qual a maior vantagem de usar uma bike elétrica? \n a) Estilo \n b) Mobilidade \n c) Menos esforço físco", resposta: "C" },
+            { perguntas: "Qual parte da bike que conecta o guidão ao quadro? \n a) Selim \n b) Forquilha \n c) Quadro", resposta: "B" },
+            { perguntas: "Qual o principal benefício para a saúde de andar de bike? \n a) Perda de peso e saúde cardiovascular \n b) Força muscular \n c) Todas as anteriores", resposta: "C" },
+            { perguntas: "Qual a razão de usar luzes na bike á noite? \n a) Não sei a resposta \n b) Estilo \n c) Segurança e visibilidade", resposta: "C" },
+            { perguntas: "O que é um câmbio de bike? \n a) Freio \n b) Dispositivo que muda as marchas \n c) Todas as anteriores", resposta: "B" },
+            { perguntas: "Quem foi o criador das bicicletas? \n a) João Vitor de Matos \n b) Francisco Vargas \n c) Nenhum dos anteriores", resposta: "C" }
+        ];
+
+        let acertos = 0;
+
+        for (let i = 0; i < perguntas.length; i++) {
+            const respostaUsuario = prompt(perguntas[i].perguntas);
+            if (respostaUsuario && respostaUsuario.toLowerCase() === perguntas[i].resposta.toLowerCase()) {
+                acertos++;
+            }
+        }
+
+        document.getElementById("msg").innerHTML = `Você acertou ${acertos} de ${perguntas.length} perguntas`;
+    });
+
     
+    // função para trocar a cor do background
+
+    function trocar(color){
+        document.body.style.background = color;
+    }
+</script>
+<body class="theme-dark">
+    <header>
+        <img src="./src/assets/logo-moskitto-semfundo.png" alt="logo-moskitto">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#d9b89b')"/>
+                    <input type="button" class="color" onclick="trocar('#f2e5a2')"/>
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="resultado">
+        <div id="msg"> </div>
+    </div>
+
+
+
+
+
 </body>
 </html>
