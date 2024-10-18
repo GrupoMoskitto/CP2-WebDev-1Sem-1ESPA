@@ -1,6 +1,228 @@
+/*reset basico*/
 *{
     margin: 2px 3px;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.theme-dark{
+    background-color: #323232;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+}
+
+header img{
+    width: 90px;
+}
+
+header nav ul{
+    display: flex;
+    padding: 1.7rem;
+    gap: 0.7rem;
+    list-style: none;
+}
+
+header nav ul a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(152, 152, 152);
+}
+
+header nav ul a:hover{
+    color: rgb(0, 81, 255);
+    transition: 1s;
+}
+
+
+
+.color{
+    border-radius: 20px;
+    width: 40px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 250px;
+    height: 200px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    padding: 20px;
+}
+
+.card img{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.card-container .card .btn-card{
+    color: #fff;
+    background-color: blue;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 4px;
+}
+
+.card-container .card .btn-card:hover{
+    color: blue;
+    background-color: rgb(145, 171, 255);
+    transition: 0.7s;
+}
+
+.home .banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.home .banner img{
+    width: 90%;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.home .titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+.home .titulo h2{
+    color: rgb(152, 152, 152);
+    border-bottom: 1px solid rgb(68, 68, 255);
+}
+
+.home .titulo h2:hover{
+    color: blue;
+    transition: 1s;
+}
+
+.rodape .container-rodape .links{
+    display: flex;
+    align-items: flex-start;   
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+.rodape .container-rodape .links img{
+    width: 50px;
+}
+
+.rodape .container-rodape .links ul li a{
+    color: rgb(152, 152, 152);
+    text-decoration: none;
+}
+
+.rodape .container-rodape .links ul li a:hover{
+    color: blue;
+    transition: 1s;
+}
+
+.rodape {
+    text-align: center; 
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .links ul {
+    list-style: none; 
+    display: flex; 
+    gap: 1rem; 
+  }
+  
+  .links p {
+    margin-top: 3rem; 
+    color: rgb(152, 152, 152);
+  }
+
+  .links #follow{
+    margin-top: -1px;
+    color: blue;
+  }
+
+
+/*Estilizando o Quiz*/
+
+.resultado{
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 5px;
+    color: blue;
+    background-color: rgb(152, 152, 152);
+}
+
+/*Estilizando o Contato*/
+
+.container-form{
+    border: 4px solid blue;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(105, 104, 104);
+}
+
+.container-form h2{
+    color: #fff;
+}
+
+.formulario{
+    padding: 10px;
+}
+
+.formulario input, .formulario button, .container-form .formulario label{
+    display: block;
+    padding: 5px;
+    color: #fff;
+}
+
+.formulario #btn-submit{
+    background-color: blue;
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 1rem;
+}
+
+/*Estilizando Sobre*/
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    align-items: center;
+    color: rgb(152, 152, 152);
+}
+
+.conteudo p{
+    border-bottom: 1px solid blue;
+    padding: 4px;
+}
+
+.title-sobre h3{
+    text-align: center;
+    margin-top: 5%;
+    padding: 2%;
+    color: rgb(152, 152, 152);
+    border-bottom: 100px solid darkblue;
 }
