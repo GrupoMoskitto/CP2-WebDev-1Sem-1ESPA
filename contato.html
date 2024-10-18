@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fale Conosco | Grupo Moskitto</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script>
+    // função para trocar a cor do background
+
+    function trocar(color){
+        document.body.style.background = color;
+    }
+    </script>
 </head>
-<body>
-    
+<body class="theme-dark">
+    <header>
+        <img src="./src/assets/logo-moskitto-semfundo.png" alt="logo-moskitto">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#d9b89b')"/>
+                    <input type="button" class="color" onclick="trocar('#f2e5a2')"/>
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-form">
+        <h2>Preencha o formulário e entre em contato conosco!</h2>
+        <form class="formulario">
+            <label for="nome"><b>Nome:</b></label>
+            <input type="text" name="nome" id="nome"/>
+            <label for="telefone"><b>Telefone:</b></label>
+            <input type="tel" name="telefone" id="telefone"/>
+            <label for="Email"><b>Email:</b></label>
+            <input type="email" name="Email" id="email"/>
+            <input type="submit" name="enviar" id="btn-submit"/>
+        </form>
+    </div>
 </body>
 </html>
